@@ -3,9 +3,15 @@ import { Bot, Context, InputFile, InlineKeyboard } from 'grammy';
 
 export const startCommand = (bot: Bot<Context>) => {
     return async (ctx: Context) => {
+        console.log('🍺 ~ start.ts:5 -> ctx: ', ctx);
         if (!ctx.chat || !ctx.from) return;
 
         const userName = ctx.from?.first_name || 'there';
+        console.log('🛠️ ~ start.ts:8 -> userName: ', userName);
+
+        if (!ctx.chat || ctx.chat.type !== 'private') {
+            return;
+          }
 
         const keyboard = new InlineKeyboard()
             .url('🌟 Add me to your group', `https://t.me/${bot.botInfo.username}?startgroup=true`) // Real group add link
