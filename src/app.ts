@@ -2,6 +2,7 @@ import 'dotenv/config';
 import { Bot, GrammyError, HttpError } from 'grammy';
 import { config } from './config';
 import { startCommand } from './commands/start';
+import { registerCallbacks } from './callbacks';
 
 async function main() {
 
@@ -13,6 +14,7 @@ async function main() {
   const bot = new Bot(config.BOT_TOKEN);
 
   bot.command('start', startCommand(bot));
+  registerCallbacks(bot); 
 
   bot.catch((err) => {
     const { error, ctx } = err;

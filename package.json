@@ -6,7 +6,7 @@
 "scripts": {
   "dev":  "ts-node-dev --respawn --transpile-only --clear src/app.ts",
   "build": "tsc",
-  "postbuild": "cpx \"assets/**/*\" dist/assets",
+  "postbuild": "cpx \"src/assets/**/*\" dist/assets",
   "start": "npm run build && node dist/app.js"
 },
   "keywords": [
