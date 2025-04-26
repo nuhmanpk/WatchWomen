@@ -1,0 +1,34 @@
+{
+  "name": "watchwomen",
+  "version": "1.0.0",
+  "description": "WatchWomenBot is a Telegram bot that helps group admins protect their communities by automatically detecting and removing scams, spam, and unwanted content. Easy to deploy with powerful moderation features.",
+  "main": "dist/app.js",
+"scripts": {
+  "dev":  "ts-node-dev --respawn --transpile-only src/app.ts",
+  "build": "tsc",
+  "postbuild": "cpx \"assets/**/*\" dist/assets",
+  "start": "npm run build && node dist/app.js"
+},
+  "keywords": [
+    "telegram",
+    "bot",
+    "moderation",
+    "helper",
+    "telegram-bot"
+  ],
+  "author": "Nuhman PK",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "grammy": "^1.36.1",
+    "mongoose": "^8.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "concurrently": "^9.1.2",
+    "cpx": "^1.5.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
