@@ -1,4 +1,4 @@
-# WatchWomenBot 🤖🛡️
+# WatchWomenBot 👮‍♀️🛡️
 
 A full-packed Telegram moderation bot built with  **TypeScript** . 
 
