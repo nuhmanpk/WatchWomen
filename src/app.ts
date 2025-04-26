@@ -45,8 +45,7 @@ async function main() {
   // Start with onStart callback
   await bot.start({
     onStart: (botInfo) => {
-      console.log('🛬 ~ app.ts:47 -> botInfo: ', botInfo);
-      console.log(`🤖 ${botInfo.username} is up and running!`);
+      console.log(`🤖 ${botInfo.username} is up and running! Visit: https://t.me/${botInfo.username}`);
     },
   });
 }

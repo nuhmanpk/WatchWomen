@@ -1,5 +1,7 @@
 # WatchWomenBot 🤖🛡️
 
+A full-packed Telegram moderation bot built with  **TypeScript** . 
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-3178C6.svg)](https://www.typescriptlang.org/)
 [![Powered by Grammy](https://img.shields.io/badge/Powered%20by-grammy-00b2ff.svg)](https://grammy.dev/)
@@ -15,7 +17,7 @@
 
 ## 🌟 What is WatchWomenBot?
 
-**WatchWomenBot** is a lightweight Telegram moderation bot built with [Grammy](https://grammy.dev/) and TypeScript.  
+**WatchWomenBot** is a lightweight Telegram moderation bot built  **TypeScript** .  
 It helps group admins **protect their communities** by automatically detecting and removing **scams, spam, and unwanted content**.
 
 Easy to **deploy**, **extend**, and **maintain** — perfect for beginners who know **Node.js** and want to dive into **Telegram bot development**!
