@@ -29,7 +29,7 @@ export function purgeCommand(bot: Bot<Context>) {
         try {
           await ctx.api.deleteMessage(chatId, messageId);
           console.log(`🧹 Deleted message ${messageId} in chat ${chatId}`);
-          
+
           // Add a small delay between requests to prevent Telegram flood
           await delay(500);
         } catch (err) {
