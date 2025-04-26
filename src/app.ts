@@ -1,9 +1,10 @@
 import 'dotenv/config';
 import { Bot, GrammyError, HttpError } from 'grammy';
 import { config } from './config';
-import { startCommand } from './commands/start';
-import { registerCallbacks } from './callbacks';
 
+import { registerCallbacks } from './callbacks';
+import { setupServices } from './services';
+import { setupCommands } from './commands';
 async function main() {
 
   if (!config.BOT_TOKEN) {
@@ -13,8 +14,9 @@ async function main() {
 
   const bot = new Bot(config.BOT_TOKEN);
 
-  bot.command('start', startCommand(bot));
-  registerCallbacks(bot); 
+  setupCommands(bot)
+  registerCallbacks(bot);
+  setupServices(bot);
 
   bot.catch((err) => {
     const { error, ctx } = err;
@@ -43,6 +45,7 @@ async function main() {
   // Start with onStart callback
   await bot.start({
     onStart: (botInfo) => {
+      console.log('🛬 ~ app.ts:47 -> botInfo: ', botInfo);
       console.log(`🤖 ${botInfo.username} is up and running!`);
     },
   });
