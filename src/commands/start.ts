@@ -3,7 +3,6 @@ import { Bot, Context, InputFile, InlineKeyboard } from 'grammy';
 
 export const startCommand = (bot: Bot<Context>) => {
     return async (ctx: Context) => {
-        console.log('🍺 ~ start.ts:5 -> ctx: ', ctx);
         if (!ctx.chat || !ctx.from) return;
 
         const userName = ctx.from?.first_name || 'there';
