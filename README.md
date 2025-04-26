@@ -50,7 +50,7 @@ Easy to **deploy**, **extend**, and **maintain** — perfect for beginners who k
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/watchwomen.git
+   git clone https://github.com/nuhmanpk/watchwomen.git
    cd watchwomen
    ```
 
@@ -62,7 +62,6 @@ Easy to **deploy**, **extend**, and **maintain** — perfect for beginners who k
 3. **Create a `.env` file**
    ```env
    BOT_TOKEN=your-telegram-bot-token-here
-   MONGODB_URI=your-mongodb-connection-string
    ```
 
 4. **Run the bot locally (development mode)**
@@ -82,21 +81,6 @@ Easy to **deploy**, **extend**, and **maintain** — perfect for beginners who k
 
 ---
 
-## 🚀 Deployment
-
-### Deploy to Railway (Recommended for beginners)
-
-1. Click this button:
-
-   [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/new)
-
-2. Set your environment variables:
-   - `BOT_TOKEN`
-   - `MONGODB_URI`
-
-3. Your bot will automatically build and start!
-
----
 
 
 ## 🧑‍💻 Author
