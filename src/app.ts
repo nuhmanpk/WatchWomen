@@ -5,6 +5,8 @@ import { config } from './config';
 import { registerCallbacks } from './callbacks';
 import { setupServices } from './services';
 import { setupCommands } from './commands';
+import { setupMiddlewares } from './middlewares';
+
 async function main() {
 
   if (!config.BOT_TOKEN) {
@@ -14,7 +16,8 @@ async function main() {
 
   const bot = new Bot(config.BOT_TOKEN);
 
-  setupCommands(bot)
+  setupMiddlewares(bot);
+  setupCommands(bot);
   registerCallbacks(bot);
   setupServices(bot);
 

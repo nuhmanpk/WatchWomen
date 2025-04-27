@@ -6,7 +6,7 @@ export const startCommand = (bot: Bot<Context>) => {
         if (!ctx.chat || !ctx.from) return;
 
         const userName = ctx.from?.first_name || 'there';
-        console.log('🛠️ ~ start.ts:8 -> userName: ', userName);
+        console.log('🔗 ~ start.ts:8 -> userName: ', userName);
 
         if (!ctx.chat || ctx.chat.type !== 'private') {
             return;
