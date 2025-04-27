@@ -90,7 +90,6 @@ Easy to **deploy**, **extend**, and **maintain** — perfect for beginners who k
    2. /help - Get Help.
    3. /report - Report a user message in groups.
    4. /purgue - Delete Messages from group.
-   5. ----
 
 ### Services
    1. Service Message cleaning.
