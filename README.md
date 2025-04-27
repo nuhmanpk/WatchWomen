@@ -80,8 +80,25 @@ Easy to **deploy**, **extend**, and **maintain** — perfect for beginners who k
    npm start
    ```
 
----
 
+
+## Usage
+
+### Commands
+
+   1. /start - Start bot.
+   2. /help - Get Help.
+   3. /report - Report a user message in groups.
+   4. /purgue - Delete Messages from group.
+   5. ----
+
+### Services
+   1. Service Message cleaning.
+   2. On Boarding Messages.
+   3. Greetings for join and left group.
+
+
+---
 
 
 ## 🧑‍💻 Author
