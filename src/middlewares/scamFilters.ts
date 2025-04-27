@@ -21,7 +21,6 @@ scamFilter.use(async (ctx, next) => {
     const raw = ctx.message?.text ?? ctx.message?.caption;
     if (!raw) return next();
     const text = raw.toLowerCase();
-    console.log('🛰️ ~ scamFilters.ts:23 -> text: ', text);
 
 
     let scamScore = 0;

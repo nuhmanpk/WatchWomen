@@ -20,8 +20,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "dotenv": "^16.5.0",
-    "grammy": "^1.36.1",
-    "mongoose": "^8.14.0"
+    "grammy": "^1.36.1"
   },
   "devDependencies": {
     "@types/node": "^22.15.2",
