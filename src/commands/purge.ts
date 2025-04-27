@@ -1,11 +1,12 @@
 import { Bot, Context } from 'grammy';
+import adminOnly from '../middlewares/adminOnly';
 
 function delay(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 export function purgeCommand(bot: Bot<Context>) {
-  bot.command('purge', async (ctx) => {
+  bot.command('purge', adminOnly, async (ctx, next) => {
     if (!ctx.chat || ctx.chat.type === 'private') {
       return ctx.reply('❌ Purge only works in groups.');
     }
@@ -43,5 +44,6 @@ export function purgeCommand(bot: Bot<Context>) {
       console.error('❌ Failed to purge messages:', error);
       await ctx.reply('❌ Failed to purge messages.');
     }
+    return next();
   });
 }

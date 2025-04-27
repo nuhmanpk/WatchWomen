@@ -16,10 +16,10 @@ async function main() {
 
   const bot = new Bot(config.BOT_TOKEN);
 
-  setupMiddlewares(bot);
   setupCommands(bot);
-  registerCallbacks(bot);
+  setupMiddlewares(bot);
   setupServices(bot);
+  registerCallbacks(bot);
 
   bot.catch((err) => {
     const { error, ctx } = err;

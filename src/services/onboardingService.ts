@@ -2,12 +2,12 @@ import { Bot, Context, InputFile, InlineKeyboard } from 'grammy';
 import { logo } from '../assets/logo';
 
 export function onboardingService(bot: Bot<Context>) {
-  bot.on('my_chat_member', async (ctx) => {
+  bot.on('my_chat_member', async (ctx,next) => {
     const status = ctx.myChatMember.new_chat_member.status;
     const oldStatus = ctx.myChatMember.old_chat_member.status;
     const chatId = ctx.chat?.id;
 
-    if (!chatId) return;
+    if (!chatId) return next();;
 
     // Check if bot was added to a group
     if (['member', 'administrator'].includes(status) && oldStatus === 'left') {
@@ -48,6 +48,8 @@ export function onboardingService(bot: Bot<Context>) {
         reply_markup: keyboard,
         parse_mode: 'Markdown', // To format the warning
       });
+      return next();
     }
+    return next();
   });
 }

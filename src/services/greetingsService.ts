@@ -1,7 +1,7 @@
 import { Bot, Context } from 'grammy';
 
 export function greetingsService(bot: Bot<Context>) {
-    bot.on('message:new_chat_members', async (ctx) => {
+    bot.on('message:new_chat_members', async (ctx,next) => {
         const members = ctx.message.new_chat_members;
 
         for (const member of members) {
@@ -12,9 +12,10 @@ export function greetingsService(bot: Bot<Context>) {
 
             await ctx.reply(`👋 Welcome, ${member.first_name}!`);
         }
+        return next();
     });
 
-    bot.on('message:left_chat_member', async (ctx) => {
+    bot.on('message:left_chat_member', async (ctx,next) => {
         const member = ctx.message.left_chat_member;
 
         if (member.id === ctx.me.id) {
@@ -24,5 +25,6 @@ export function greetingsService(bot: Bot<Context>) {
         }
 
         await ctx.reply(`👋 Goodbye, ${member.first_name}!`);
+        return next();
     });
 }

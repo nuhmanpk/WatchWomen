@@ -2,7 +2,7 @@ import { logo } from '../assets/logo';
 import { Bot, Context, InputFile, InlineKeyboard } from 'grammy';
 
 export const startCommand = (bot: Bot<Context>) => {
-    return async (ctx: Context) => {
+    return async (ctx: Context, next: () => Promise<void>) => {
         if (!ctx.chat || !ctx.from) return;
 
         const userName = ctx.from?.first_name || 'there';
@@ -28,6 +28,7 @@ export const startCommand = (bot: Bot<Context>) => {
                 reply_markup: keyboard
             }
         );
+        return next();
     };
 
 };

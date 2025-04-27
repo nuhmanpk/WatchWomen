@@ -1,7 +1,7 @@
 import { Bot, Context } from 'grammy';
 
 export function serviceMessageCleaner(bot: Bot<Context>) {
-  bot.on('message', async (ctx) => {
+  bot.on('message', async (ctx,next) => {
     const serviceMessageTypes = [
       'new_chat_members',
       'left_chat_member',
@@ -28,5 +28,6 @@ export function serviceMessageCleaner(bot: Bot<Context>) {
         console.error('❌ Failed to delete service message:', err);
       }
     }
+    return next();
   });
 }

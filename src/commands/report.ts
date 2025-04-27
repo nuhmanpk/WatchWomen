@@ -1,7 +1,7 @@
-import { Bot, Context, InlineKeyboard } from 'grammy';
+import { Bot, Context } from 'grammy';
 
 export function reportCommand(bot: Bot<Context>) {
-    bot.command('report', async (ctx) => {
+    bot.command('report', async (ctx,next) => {
         if (!ctx.chat) {
             return ctx.reply('❌ This command can only be used in groups.');
         }
@@ -48,5 +48,6 @@ ${reportedMessage}
         await ctx.deleteMessage();
 
         await ctx.reply('✅ Your report has been sent to the group admins.');
+        return next();
     });
 }
