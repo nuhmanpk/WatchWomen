@@ -7,6 +7,7 @@ A full-packed Telegram moderation bot built with  **TypeScript** .
 [![Powered by Grammy](https://img.shields.io/badge/Powered%20by-grammy-00b2ff.svg)](https://grammy.dev/)
 [![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-3178C6.svg)](https://www.typescriptlang.org/)
 [![Deploy on Vercel](https://img.shields.io/badge/Deploy%20on-Vercel-000.svg?logo=vercel)](https://vercel.com/)
+[![Known Vulnerabilities](https://snyk.io/test/github/nuhmanpk/watchwomen/badge.svg)](https://snyk.io/test/github/nuhmanpk/watchwomen)
 
 ---
 
