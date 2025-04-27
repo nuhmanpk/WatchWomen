@@ -61,8 +61,11 @@ Easy to **deploy**, **extend**, and **maintain** — perfect for beginners who k
    ```
 
 3. **Create a `.env` file**
+
+   Get your Bot Token from [@BotFather](https://t.me/botfather)
+
    ```env
-   BOT_TOKEN=your-telegram-bot-token-here
+   BOT_TOKEN='your-telegram-bot-token-here'
    ```
 
 4. **Run the bot locally (development mode)**
